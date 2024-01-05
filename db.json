@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "title": "jj",
+      "city": "Dushanbe",
+      "status": true,
+      "phone": "901924545",
+      "avatar": "/imge/Capture.PNG",
+      "email": "munirahnad448@gmail.com",
+      "id": 8
+    },
+    {
+      "img": "kdjlkjlk",
+      "title": "munibokhtrarr",
+      "city": "bokhtar",
+      "status": true,
+      "phone": "901924545",
+      "avatar": "/imge/Capture.PNG",
+      "email": "munirahnad448@gmail.com",
+      "id": 4
+    },
+    {
+      "title": "muniy",
+      "city": "Dushanbe",
+      "status": true,
+      "phone": "901924545",
+      "avatar": "/imge/Capture.PNG",
+      "email": "munirahnad448@gmail.com",
+      "id": 9
+    },
+    {
+      "title": "",
+      "city": "Dushanbe",
+      "status": true,
+      "phone": "",
+      "email": "",
+      "id": 10
+    },
+    {
+      "title": "munir",
+      "city": "Dushanbe",
+      "status": true,
+      "phone": "901924545",
+      "email": "munirahnad448@gmail.com",
+      "id": 11
+    },
+    {
+      "title": "munir",
+      "city": "Dushanbe",
+      "status": true,
+      "phone": "90192",
+      "email": "munirahnad448@gmail.com",
+      "id": 12
+    },
+    {
+      "title": "",
+      "city": "Bokhtar",
+      "status": true,
+      "phone": "",
+      "email": "",
+      "id": 13
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Management</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Users Management</h1>
+    <h2>Create New User</h2>
+    <form id="userForm">
+        <label for="iid">Iid:</label><br>
+        <input type="text" id="iid" name="iid"><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="active">Active:</label><br>
+        <input type="checkbox" id="active" name="active"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Show</h2>
+    <table id="usersTable">
+        <tr>
+            <th>Iid</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Active</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <script>
+        const users = [
+            // your array of users here
+        ];
+
+        function renderUsers() {
+            const table = document.getElementById('usersTable');
+            table.innerHTML = '<tr><th>Iid</th><th>Name</th><th>Email</th><th>Active</th><th>Action</th></tr>';
+            users.forEach(user => {
+                const row = table.insertRow();
+                ['iid', 'name', 'email', 'active'].forEach(key => {
+                    const cell = row.insertCell();
+                    cell.textContent = user[key];
+                });
+                const actionCell = row.insertCell();
+                actionCell.innerHTML = `<a href="/users/${user.iid}/edit">Edit</a> | <a href="/users/${user.iid}/delete">Delete</a>`;
+            });
+        }
+
+        document.getElementById('userForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const newUser = {
+                iid: document.getElementById('iid').value,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                active: document.getElementById('active').checked
+            };
+            users.push(newUser);
+            renderUsers();
+        });
+
+        renderUsers();
+    </script>
+</body>
+</html>
+<!-- //---------------------------------------------------------------- -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="form">
+      <input type="text" name="title" />
+      <input type="text" name="city" />
+      <button type="submit">add</button>
+    </form>
+
+    <div class="box"></div>
+
+    <script>
+      
+      let box = document.querySelector(".box");
+      let form = document.querySelector(".form");
+      let api = "https://655367345449cfda0f2ea0f3.mockapi.io/todo";
+
+
+      async function getData() {
+        try {
+          const response = await fetch(apl);
+          const data = await response.json();
+
+          get(data);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      getData();
+      //get request
+      function get(data) {
+        box.InnerHTML = "";
+        data.forEach((el) => {
+          let div = document.createElement("div");
+          let title = document.createElement("hl");
+
+          title.innerHTML = el.title;
+          let city = document.createElement("hl");
+
+          city.innerHTML = el.city;
+          let statys = document.createElement("p");
+          statys.innerHTML = el.status == true ? "Active" : "InActive";
+          if ((el.status = true)) {
+            title.classtist.add("active");
+          }
+
+          let btnDel = document.createElement("button");
+          btnDel.innerHTML = "Delete";
+
+          btnDel.onclick = () => {
+            deleteUser(el.id);
+          };
+
+          let checkbox = document.createElement("input");
+
+          checkbox.type = "checkbox";
+          checkbox.checked = el.status;
+
+          checkbox.onclick = () => {
+            el.status = !el.status;
+            completeUser(el.id, el);
+          };
+
+          div.append(title, city, btnDel, checkbox);
+
+          box.append(div);
+        }); // forEche
+      }
+      // end  of getData()
+
+      async function postUser(user) {
+        try {
+          const response = await fetch(api, {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+          });
+          getData();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      //add togic
+
+      form.onsubmit = (event) => {
+        event.preventDefault();
+        let user = {
+          title: form["title"].value,
+          city: event.target["city"].value,
+          status: false,
+        };
+        postUser(user);
+        form.reset();
+      };
+
+      //delete
+
+      async function deleteUser(id) {
+        try {
+          const response = await fetch(`${api}/${id}`, {
+            method: "DELETE",
+          });
+          getData();
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      // 94 //complete
+
+      async function completeUser(id, user) {
+        try {
+          const response = await fetch(`${pi}/${id}`, {
+            method: "PUT",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+
+            body: JSON.stringify(user),
+          });
+          getData();
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    </script>
+  </body>
+</html> -->

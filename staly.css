@@ -1,0 +1,178 @@
+* {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      background-color: rgb(224, 208, 208);
+      /* height: 80vh; */
+      width: 90%;
+      margin: auto;
+      margin-top: 30px;
+      padding: 0px 10px;
+    }
+    .ul {
+      padding-top: 20px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+    .ul h3 {
+      padding-left: 30px;
+    }
+
+    select {
+      margin-left: 10px;
+
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+    option {
+      font-size: 17px;
+      height: 200px;
+    }
+    .right li {
+      background-color: rgb(0, 166, 255);
+      font-size: 20px;
+      padding: 5px 10px;
+
+      border-radius: 5px;
+    }
+
+    .right {
+      width: 20%;
+      /* background-color: thistle; */
+      padding-right: 30px;
+      display: flex;
+
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .ul2 {
+      width: 100%;
+      padding-top: 20px;
+
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      /* background-color: brown ; */
+    }
+
+    .right2 input {
+      padding: 6px 20px;
+      width: 60%;
+    }
+
+    /* ///////////////// */
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(213, 219, 225, 1);
+      padding: 10px 30px;
+      margin-top: 20px;
+    }
+    .img1 {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+    .div3 {
+      /* background-color: blue;   */
+      font-size: 10px;
+      width: 20%;
+      padding-left: 5px;
+    }
+    .div2 {
+      display: flex;
+      align-items: center;
+      padding: 10px 0px;
+      /* justify-content: space-between; */
+      border-bottom: 1px solid rgb(52, 52, 51);
+    }
+    .city {
+      /* background-color: rgb(110, 165, 42); */
+
+      padding: 0px 20px;
+      margin-left: 20px;
+      text-align: center;
+      width: 20%;
+    }
+    .status {
+      background-color: #748998;
+      padding: 0px 20px;
+      /* width: %; */
+      margin-left: 90px;
+    }
+    .namePhone2 {
+      /* background-color: rgb(108, 101, 130); */
+      width: 8%;
+    }
+    .Phone {
+      /* background-color: rgb(108, 101, 130); */
+      padding: 0px 20px;
+      width: 20%;
+      margin-left: 30px;
+      padding-left: 90px;
+    }
+    .namePhone {
+      width: 20%;
+      /* background-color: rgb(108, 101, 130); */
+    }
+    .namecity {
+      width: 20%;
+      margin-left: 40px;
+      text-align: center;
+      padding-left: 70px;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .H2 {
+      font-size: 20px;
+      color: gray;
+    }
+    .AH6 {
+      font-size: 50px;
+      padding-bottom: 20px;
+      color: #748998;
+    }
+    .diyINFO {
+      height: 200px;
+      width: 200px;
+      text-align: center;
+      margin: auto;
+    }
+    .diyINFO button {
+      width: 90%;
+      margin-top: 10px;
+    }
+    .diyINFO h1 {
+      margin-bottom: 30px;
+      margin-top: 20px;
+    }
+    .diyADD {
+      height: 400px;
+      width: 300px;
+      margin: auto;
+      text-align: center;
+      background-color: aquamarine;
+    }
+    .diyADD input,
+    select {
+      width: 90%;
+      padding: 10px 0px;
+      margin-top: 30px;
+    }
+    .diyADD button {
+      margin-top: 40px;
+      width: 30%;
+      margin-left: 10px;
+      padding: 10px 0px;
+    }
